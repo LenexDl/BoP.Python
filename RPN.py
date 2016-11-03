@@ -1,4 +1,4 @@
-rpn = input().split()
+rpn = input("Enter your chain: ").split()
 stack = []
 result = 0
 for i in range(len(rpn)):
@@ -35,4 +35,7 @@ for i in range(len(rpn)):
     else:
         stack.append(rpn[0])
         del rpn[0]
-print(float(stack[0]))
+if len(stack) == 1 and len(rpn) == 0:
+    print("Result = ", float(stack[0]))
+else:
+    print("Incorrect chain. Please restart program and start again.")
